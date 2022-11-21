@@ -14,7 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     FormsModule,
     InfoBoxModule,
-    StoreModule.forRoot({ count: usersReducer }),
+    StoreModule.forRoot({ users: usersReducer }),
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent],
