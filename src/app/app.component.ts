@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
+import { IUsers } from './info-box/users.model';
+import { retrievedUsersList } from './store/users.actions';
+import { selectUsers } from './store/users.selectors';
 import { UsersService } from './users.service';
 
 @Component({
@@ -8,13 +11,21 @@ import { UsersService } from './users.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  constructor() {}
+  constructor(private fetch: UsersService, private store: Store) {}
 
   usersData$: any;
+
+  users$ = this.store.select(selectUsers);
 
   checkboxValue: boolean = false;
 
   ngOnInit(): void {
+    this.fetch
+      .getUsersInfoFromApi()
+      .subscribe((users: any) =>
+        this.store.dispatch(retrievedUsersList({ users }))
+      );
+
     this.usersData$ = {
       data: [
         {
@@ -54,6 +65,8 @@ export class AppComponent implements OnInit {
         },
       ],
     };
+
+    console.log(this.users$);
   }
 
   onCheckboxChange(e) {

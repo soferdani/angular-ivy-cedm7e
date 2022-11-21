@@ -5,3 +5,7 @@ export interface IUsers {
   email: string;
   age: number;
 }
+
+export interface IDataUsers {
+  data: IUsers[]
+}

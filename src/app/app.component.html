@@ -14,3 +14,14 @@
     ></app-info-box>
   </div>
 </div>
+
+<hr class="rounded" />
+<div class="singel-info-conteiner" *ngFor="let user of users$ | async">
+  <app-info-box
+    [id]="user.id"
+    [firstName]="user.firstName"
+    [lastName]="user.lastName"
+    [email]="user.email"
+    [age]="user.age"
+  ></app-info-box>
+</div>

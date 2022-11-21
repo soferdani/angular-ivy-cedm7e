@@ -1,5 +1,7 @@
-import { createAction } from '@ngrx/store';
+import { createAction, props } from '@ngrx/store';
+import { IUsers } from '../info-box/users.model';
 
-export const increment = createAction('[Counter Component] Increment');
-export const decrement = createAction('[Counter Component] Decrement');
-export const reset = createAction('[Counter Component] Reset');
+export const retrievedUsersList = createAction( // this is good
+  '[Users List/API] Retrieve Users Success',
+  props<{ users: any }>()
+);
