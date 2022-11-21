@@ -12,9 +12,6 @@ export class UsersService {
   public getUsersInfoFromApi(): Observable<IDataUsers> {
     const url =
       'https://innovi-front-end.s3.us-west-2.amazonaws.com/customers.json';
-    return this.httpClient.get(url).pipe(
-      // tap(console.log),
-      map((users: any) => users.data)
-    );
+    return this.httpClient.get(url).pipe(map((users: any) => users.data));
   }
 }
