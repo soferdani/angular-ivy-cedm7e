@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FetchService } from './fetch.service';
+import { Store } from '@ngrx/store';
+import { UsersService } from './users.service';
 
 @Component({
   selector: 'my-app',

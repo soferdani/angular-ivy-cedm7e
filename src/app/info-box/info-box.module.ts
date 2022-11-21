@@ -3,10 +3,8 @@ import { CommonModule } from '@angular/common';
 import { InfoBoxComponent } from './info-box.component';
 
 @NgModule({
-  imports: [
-    CommonModule
-  ],
+  imports: [CommonModule],
   declarations: [InfoBoxComponent],
-  exports:[InfoBoxComponent]
+  exports: [InfoBoxComponent],
 })
-export class InfoBoxModule { }
+export class InfoBoxModule {}
