@@ -1,0 +1,25 @@
+p {
+  font-family: Lato;
+}
+
+.headline-conteiner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.singel-info-conteiner {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  max-width: 600px;
+}
+
+.list-holder {
+  display: flex;
+  flex-direction: column;
+}
+
+.isRow {
+  flex-direction: row !important;
+  flex-wrap: wrap;
+}
