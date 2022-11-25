@@ -6,5 +6,5 @@ export const initialState: any = [];
 
 export const usersReducer = createReducer(
   initialState,
-  on(retrievedUsersList, (state, { users }) => users)
+  on(retrievedUsersList, (state, { users }) => users) 
 );
